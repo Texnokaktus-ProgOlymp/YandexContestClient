@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips
+using YandexContestClient.Client.Contests.Neurips.Item;
+namespace YandexContestClient.Client.Contests.Neurips
 {
     /// <summary>
     /// Builds and executes requests for operations under \contests\neurips
@@ -15,20 +15,20 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NeuripsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>Gets an item from the Texnokaktus.ProgOlymp.YandexContestClient.Client.contests.neurips.item collection</summary>
+        /// <summary>Gets an item from the YandexContestClient.Client.contests.neurips.item collection</summary>
         /// <param name="position">contestId</param>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item.WithContestItemRequestBuilder"/></returns>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item.WithContestItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::YandexContestClient.Client.Contests.Neurips.Item.WithContestItemRequestBuilder"/></returns>
+        public global::YandexContestClient.Client.Contests.Neurips.Item.WithContestItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("contestId", position);
-                return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item.WithContestItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new global::YandexContestClient.Client.Contests.Neurips.Item.WithContestItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.NeuripsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Neurips.NeuripsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +36,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.NeuripsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Neurips.NeuripsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

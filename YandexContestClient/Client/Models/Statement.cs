@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
+namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
@@ -31,9 +31,9 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         public string Path { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement_type? Type { get; set; }
+        public global::YandexContestClient.Client.Models.Statement_type? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.Statement"/> and sets the default values.
         /// </summary>
         public Statement()
         {
@@ -42,12 +42,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.Statement"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.Statement CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement();
+            return new global::YandexContestClient.Client.Models.Statement();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +59,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
             {
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::YandexContestClient.Client.Models.Statement_type>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("path", Path);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement_type>("type", Type);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.Statement_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

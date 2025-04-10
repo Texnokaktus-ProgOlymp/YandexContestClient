@@ -10,17 +10,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Compilers;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Participants;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Problems;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Service;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Teams;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.User;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client
+using YandexContestClient.Client.Competitions;
+using YandexContestClient.Client.Compilers;
+using YandexContestClient.Client.Contests;
+using YandexContestClient.Client.Groups;
+using YandexContestClient.Client.Participants;
+using YandexContestClient.Client.Problems;
+using YandexContestClient.Client.Service;
+using YandexContestClient.Client.Submissions;
+using YandexContestClient.Client.Teams;
+using YandexContestClient.Client.User;
+namespace YandexContestClient.Client
 {
     /// <summary>
     /// The main entry point of the SDK, exposes the configuration and the fluent API.
@@ -29,57 +29,57 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client
     public partial class ContestClient : BaseRequestBuilder
     {
         /// <summary>The competitions property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions.CompetitionsRequestBuilder Competitions
+        public global::YandexContestClient.Client.Competitions.CompetitionsRequestBuilder Competitions
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions.CompetitionsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Competitions.CompetitionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The compilers property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Compilers.CompilersRequestBuilder Compilers
+        public global::YandexContestClient.Client.Compilers.CompilersRequestBuilder Compilers
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Compilers.CompilersRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Compilers.CompilersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The contests property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.ContestsRequestBuilder Contests
+        public global::YandexContestClient.Client.Contests.ContestsRequestBuilder Contests
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.ContestsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.ContestsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The groups property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.GroupsRequestBuilder Groups
+        public global::YandexContestClient.Client.Groups.GroupsRequestBuilder Groups
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.GroupsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Groups.GroupsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The participants property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Participants.ParticipantsRequestBuilder Participants
+        public global::YandexContestClient.Client.Participants.ParticipantsRequestBuilder Participants
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Participants.ParticipantsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Participants.ParticipantsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The problems property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Problems.ProblemsRequestBuilder Problems
+        public global::YandexContestClient.Client.Problems.ProblemsRequestBuilder Problems
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Problems.ProblemsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Problems.ProblemsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The service property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.ServiceRequestBuilder Service
+        public global::YandexContestClient.Client.Service.ServiceRequestBuilder Service
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.ServiceRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Service.ServiceRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The submissions property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.SubmissionsRequestBuilder Submissions
+        public global::YandexContestClient.Client.Submissions.SubmissionsRequestBuilder Submissions
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.SubmissionsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Submissions.SubmissionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The teams property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Teams.TeamsRequestBuilder Teams
+        public global::YandexContestClient.Client.Teams.TeamsRequestBuilder Teams
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Teams.TeamsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Teams.TeamsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The user property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.User.UserRequestBuilder User
+        public global::YandexContestClient.Client.User.UserRequestBuilder User
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.User.UserRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.User.UserRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.ContestClient"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.ContestClient"/> and sets the default values.
         /// </summary>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
         public ContestClient(IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}", new Dictionary<string, object>())

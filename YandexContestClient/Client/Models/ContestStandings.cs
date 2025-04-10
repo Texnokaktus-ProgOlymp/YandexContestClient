@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
+namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
@@ -17,29 +17,29 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>The rows property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandingsRow>? Rows { get; set; }
+        public List<global::YandexContestClient.Client.Models.ContestStandingsRow>? Rows { get; set; }
 #nullable restore
 #else
-        public List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandingsRow> Rows { get; set; }
+        public List<global::YandexContestClient.Client.Models.ContestStandingsRow> Rows { get; set; }
 #endif
         /// <summary>The statistics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStatistics? Statistics { get; set; }
+        public global::YandexContestClient.Client.Models.ContestStatistics? Statistics { get; set; }
 #nullable restore
 #else
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStatistics Statistics { get; set; }
+        public global::YandexContestClient.Client.Models.ContestStatistics Statistics { get; set; }
 #endif
         /// <summary>The titles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandingsTitle>? Titles { get; set; }
+        public List<global::YandexContestClient.Client.Models.ContestStandingsTitle>? Titles { get; set; }
 #nullable restore
 #else
-        public List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandingsTitle> Titles { get; set; }
+        public List<global::YandexContestClient.Client.Models.ContestStandingsTitle> Titles { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandings"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.ContestStandings"/> and sets the default values.
         /// </summary>
         public ContestStandings()
         {
@@ -48,12 +48,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandings"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.ContestStandings"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.ContestStandings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandings();
+            return new global::YandexContestClient.Client.Models.ContestStandings();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,9 +63,9 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "rows", n => { Rows = n.GetCollectionOfObjectValues<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandingsRow>(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandingsRow.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "statistics", n => { Statistics = n.GetObjectValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStatistics>(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStatistics.CreateFromDiscriminatorValue); } },
-                { "titles", n => { Titles = n.GetCollectionOfObjectValues<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandingsTitle>(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandingsTitle.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "rows", n => { Rows = n.GetCollectionOfObjectValues<global::YandexContestClient.Client.Models.ContestStandingsRow>(global::YandexContestClient.Client.Models.ContestStandingsRow.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "statistics", n => { Statistics = n.GetObjectValue<global::YandexContestClient.Client.Models.ContestStatistics>(global::YandexContestClient.Client.Models.ContestStatistics.CreateFromDiscriminatorValue); } },
+                { "titles", n => { Titles = n.GetCollectionOfObjectValues<global::YandexContestClient.Client.Models.ContestStandingsTitle>(global::YandexContestClient.Client.Models.ContestStandingsTitle.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandingsRow>("rows", Rows);
-            writer.WriteObjectValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStatistics>("statistics", Statistics);
-            writer.WriteCollectionOfObjectValues<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestStandingsTitle>("titles", Titles);
+            writer.WriteCollectionOfObjectValues<global::YandexContestClient.Client.Models.ContestStandingsRow>("rows", Rows);
+            writer.WriteObjectValue<global::YandexContestClient.Client.Models.ContestStatistics>("statistics", Statistics);
+            writer.WriteCollectionOfObjectValues<global::YandexContestClient.Client.Models.ContestStandingsTitle>("titles", Titles);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

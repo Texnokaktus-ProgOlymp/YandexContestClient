@@ -8,9 +8,9 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.Item;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Models;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups
+using YandexContestClient.Client.Contests.Item.Groups.Item;
+using YandexContestClient.Client.Models;
+namespace YandexContestClient.Client.Contests.Item.Groups
 {
     /// <summary>
     /// Builds and executes requests for operations under \contests\{contestId}\groups
@@ -18,20 +18,20 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GroupsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>Gets an item from the Texnokaktus.ProgOlymp.YandexContestClient.Client.contests.item.groups.item collection</summary>
+        /// <summary>Gets an item from the YandexContestClient.Client.contests.item.groups.item collection</summary>
         /// <param name="position">groupId</param>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder"/></returns>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder"/></returns>
+        public global::YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("groupId", position);
-                return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new global::YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -39,7 +39,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -49,20 +49,20 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups
         /// <summary>
         /// Required scope: &lt;code&gt;manage&lt;/code&gt;
         /// </summary>
-        /// <returns>A List&lt;global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestGroup&gt;</returns>
+        /// <returns>A List&lt;global::YandexContestClient.Client.Models.ContestGroup&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestGroup>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::YandexContestClient.Client.Models.ContestGroup>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestGroup>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::YandexContestClient.Client.Models.ContestGroup>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestGroup>(requestInfo, global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestGroup.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::YandexContestClient.Client.Models.ContestGroup>(requestInfo, global::YandexContestClient.Client.Models.ContestGroup.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>
@@ -87,11 +87,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder WithUrl(string rawUrl)
+        public global::YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder(rawUrl, RequestAdapter);
+            return new global::YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

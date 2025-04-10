@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
+namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
@@ -17,10 +17,10 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>The contestSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings? ContestSettings { get; set; }
+        public global::YandexContestClient.Client.Models.ContestReportSettings? ContestSettings { get; set; }
 #nullable restore
 #else
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings ContestSettings { get; set; }
+        public global::YandexContestClient.Client.Models.ContestReportSettings ContestSettings { get; set; }
 #endif
         /// <summary>Contest duration, in seconds</summary>
         public long? Duration { get; set; }
@@ -43,11 +43,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         public string StartTime { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription_type? Type { get; set; }
+        public global::YandexContestClient.Client.Models.ContestDescription_type? Type { get; set; }
         /// <summary>Upsolving settings - `ALLOWED_AFTER_PARTICIPATION_ENDS` — participant can upsolve after their participation ends - `ALLOWED_AFTER_CONTEST_ENDS` — participant can upsolve after contest is finished for everyone - `PROHIBITED` — participant can not upsolve</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription_upsolvingAllowance? UpsolvingAllowance { get; set; }
+        public global::YandexContestClient.Client.Models.ContestDescription_upsolvingAllowance? UpsolvingAllowance { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.ContestDescription"/> and sets the default values.
         /// </summary>
         public ContestDescription()
         {
@@ -56,12 +56,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.ContestDescription"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.ContestDescription CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription();
+            return new global::YandexContestClient.Client.Models.ContestDescription();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,13 +71,13 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "contestSettings", n => { ContestSettings = n.GetObjectValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings>(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings.CreateFromDiscriminatorValue); } },
+                { "contestSettings", n => { ContestSettings = n.GetObjectValue<global::YandexContestClient.Client.Models.ContestReportSettings>(global::YandexContestClient.Client.Models.ContestReportSettings.CreateFromDiscriminatorValue); } },
                 { "duration", n => { Duration = n.GetLongValue(); } },
                 { "freezeTime", n => { FreezeTime = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription_type>(); } },
-                { "upsolvingAllowance", n => { UpsolvingAllowance = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription_upsolvingAllowance>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestDescription_type>(); } },
+                { "upsolvingAllowance", n => { UpsolvingAllowance = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestDescription_upsolvingAllowance>(); } },
             };
         }
         /// <summary>
@@ -87,13 +87,13 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings>("contestSettings", ContestSettings);
+            writer.WriteObjectValue<global::YandexContestClient.Client.Models.ContestReportSettings>("contestSettings", ContestSettings);
             writer.WriteLongValue("duration", Duration);
             writer.WriteLongValue("freezeTime", FreezeTime);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("startTime", StartTime);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription_type>("type", Type);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription_upsolvingAllowance>("upsolvingAllowance", UpsolvingAllowance);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestDescription_type>("type", Type);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestDescription_upsolvingAllowance>("upsolvingAllowance", UpsolvingAllowance);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

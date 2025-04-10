@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
+namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
@@ -77,7 +77,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         public string Verdict { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Submission"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.Submission"/> and sets the default values.
         /// </summary>
         public Submission()
         {
@@ -86,12 +86,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Submission"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.Submission"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Submission CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.Submission CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Submission();
+            return new global::YandexContestClient.Client.Models.Submission();
         }
         /// <summary>
         /// The deserialization information for the current model

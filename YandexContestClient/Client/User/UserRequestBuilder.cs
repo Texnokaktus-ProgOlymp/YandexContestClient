@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.User.Item;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.User
+using YandexContestClient.Client.User.Item;
+namespace YandexContestClient.Client.User
 {
     /// <summary>
     /// Builds and executes requests for operations under \user
@@ -15,20 +15,20 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.User
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UserRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>Gets an item from the Texnokaktus.ProgOlymp.YandexContestClient.Client.user.item collection</summary>
+        /// <summary>Gets an item from the YandexContestClient.Client.user.item collection</summary>
         /// <param name="position">userId</param>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.User.Item.WithUserItemRequestBuilder"/></returns>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.User.Item.WithUserItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::YandexContestClient.Client.User.Item.WithUserItemRequestBuilder"/></returns>
+        public global::YandexContestClient.Client.User.Item.WithUserItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("userId", position);
-                return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.User.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new global::YandexContestClient.Client.User.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.User.UserRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.User.UserRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +36,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.User
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.User.UserRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.User.UserRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

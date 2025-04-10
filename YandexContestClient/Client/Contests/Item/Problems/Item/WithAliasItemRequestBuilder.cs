@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.Item.Statement;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.Item
+using YandexContestClient.Client.Contests.Item.Problems.Item.Statement;
+namespace YandexContestClient.Client.Contests.Item.Problems.Item
 {
     /// <summary>
     /// Builds and executes requests for operations under \contests\{contestId}\problems\{alias}
@@ -16,12 +16,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problem
     public partial class WithAliasItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The statement property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.Item.Statement.StatementRequestBuilder Statement
+        public global::YandexContestClient.Client.Contests.Item.Problems.Item.Statement.StatementRequestBuilder Statement
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.Item.Statement.StatementRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Problems.Item.Statement.StatementRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.Item.WithAliasItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.Problems.Item.WithAliasItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -29,7 +29,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problem
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.Item.WithAliasItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.Problems.Item.WithAliasItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

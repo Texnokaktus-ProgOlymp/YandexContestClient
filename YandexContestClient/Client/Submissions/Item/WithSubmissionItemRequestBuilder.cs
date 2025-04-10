@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Rejudge;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item
+using YandexContestClient.Client.Submissions.Item.Rejudge;
+namespace YandexContestClient.Client.Submissions.Item
 {
     /// <summary>
     /// Builds and executes requests for operations under \submissions\{submissionId}
@@ -16,12 +16,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item
     public partial class WithSubmissionItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The rejudge property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder Rejudge
+        public global::YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder Rejudge
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.WithSubmissionItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Submissions.Item.WithSubmissionItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -29,7 +29,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.WithSubmissionItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Submissions.Item.WithSubmissionItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

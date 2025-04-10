@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
+namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
@@ -55,19 +55,19 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionResult? Result { get; set; }
+        public global::YandexContestClient.Client.Models.NeuripsSubmissionResult? Result { get; set; }
 #nullable restore
 #else
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionResult Result { get; set; }
+        public global::YandexContestClient.Client.Models.NeuripsSubmissionResult Result { get; set; }
 #endif
         /// <summary>The runId property</summary>
         public long? RunId { get; set; }
         /// <summary>The status property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionReport_status? Status { get; set; }
+        public global::YandexContestClient.Client.Models.NeuripsSubmissionReport_status? Status { get; set; }
         /// <summary>The timeFromStartMillis property</summary>
         public long? TimeFromStartMillis { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionReport"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.NeuripsSubmissionReport"/> and sets the default values.
         /// </summary>
         public NeuripsSubmissionReport()
         {
@@ -76,12 +76,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionReport"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.NeuripsSubmissionReport"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionReport CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.NeuripsSubmissionReport CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionReport();
+            return new global::YandexContestClient.Client.Models.NeuripsSubmissionReport();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,9 +98,9 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
                 { "participantName", n => { ParticipantName = n.GetStringValue(); } },
                 { "problemId", n => { ProblemId = n.GetStringValue(); } },
                 { "rank", n => { Rank = n.GetIntValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionResult>(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionResult.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<global::YandexContestClient.Client.Models.NeuripsSubmissionResult>(global::YandexContestClient.Client.Models.NeuripsSubmissionResult.CreateFromDiscriminatorValue); } },
                 { "runId", n => { RunId = n.GetLongValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionReport_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::YandexContestClient.Client.Models.NeuripsSubmissionReport_status>(); } },
                 { "timeFromStartMillis", n => { TimeFromStartMillis = n.GetLongValue(); } },
             };
         }
@@ -118,9 +118,9 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
             writer.WriteStringValue("participantName", ParticipantName);
             writer.WriteStringValue("problemId", ProblemId);
             writer.WriteIntValue("rank", Rank);
-            writer.WriteObjectValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionResult>("result", Result);
+            writer.WriteObjectValue<global::YandexContestClient.Client.Models.NeuripsSubmissionResult>("result", Result);
             writer.WriteLongValue("runId", RunId);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.NeuripsSubmissionReport_status>("status", Status);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.NeuripsSubmissionReport_status>("status", Status);
             writer.WriteLongValue("timeFromStartMillis", TimeFromStartMillis);
             writer.WriteAdditionalData(AdditionalData);
         }

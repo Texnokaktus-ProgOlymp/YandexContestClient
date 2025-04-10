@@ -6,12 +6,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Answer;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.CheckerError;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Error;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Input;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Output;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item
+using YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Answer;
+using YandexContestClient.Client.Contests.Item.Submissions.Item.Item.CheckerError;
+using YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Error;
+using YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Input;
+using YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Output;
+namespace YandexContestClient.Client.Contests.Item.Submissions.Item.Item
 {
     /// <summary>
     /// Builds and executes requests for operations under \contests\{contestId}\submissions\{submissionId}\{testName}
@@ -20,32 +20,32 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submiss
     public partial class WithTestNameItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The answer property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Answer.AnswerRequestBuilder Answer
+        public global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Answer.AnswerRequestBuilder Answer
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Answer.AnswerRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Answer.AnswerRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The checkerError property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.CheckerError.CheckerErrorRequestBuilder CheckerError
+        public global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.CheckerError.CheckerErrorRequestBuilder CheckerError
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.CheckerError.CheckerErrorRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.CheckerError.CheckerErrorRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The error property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Error.ErrorRequestBuilder Error
+        public global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Error.ErrorRequestBuilder Error
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Error.ErrorRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Error.ErrorRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The input property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Input.InputRequestBuilder Input
+        public global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Input.InputRequestBuilder Input
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Input.InputRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Input.InputRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The output property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Output.OutputRequestBuilder Output
+        public global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Output.OutputRequestBuilder Output
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Output.OutputRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.Output.OutputRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.WithTestNameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.WithTestNameItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -53,7 +53,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submiss
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.Item.Item.WithTestNameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.Submissions.Item.Item.WithTestNameItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

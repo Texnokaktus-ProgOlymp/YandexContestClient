@@ -8,8 +8,8 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Models;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect
+using YandexContestClient.Client.Models;
+namespace YandexContestClient.Client.Service.Introspect
 {
     /// <summary>
     /// Builds and executes requests for operations under \service\introspect
@@ -18,7 +18,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect
     public partial class IntrospectRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +26,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,20 +36,20 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect
         /// <summary>
         /// Get available scopes
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.TokenInfo"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.TokenInfo"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.TokenInfo?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::YandexContestClient.Client.Models.TokenInfo?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.TokenInfo> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::YandexContestClient.Client.Models.TokenInfo> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.TokenInfo>(requestInfo, global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.TokenInfo.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::YandexContestClient.Client.Models.TokenInfo>(requestInfo, global::YandexContestClient.Client.Models.TokenInfo.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get available scopes
@@ -73,11 +73,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder WithUrl(string rawUrl)
+        public global::YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder(rawUrl, RequestAdapter);
+            return new global::YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

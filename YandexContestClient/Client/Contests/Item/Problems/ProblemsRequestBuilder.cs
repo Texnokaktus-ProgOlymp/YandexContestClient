@@ -8,9 +8,9 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.Item;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Models;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems
+using YandexContestClient.Client.Contests.Item.Problems.Item;
+using YandexContestClient.Client.Models;
+namespace YandexContestClient.Client.Contests.Item.Problems
 {
     /// <summary>
     /// Builds and executes requests for operations under \contests\{contestId}\problems
@@ -18,20 +18,20 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problem
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProblemsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>Gets an item from the Texnokaktus.ProgOlymp.YandexContestClient.Client.contests.item.problems.item collection</summary>
+        /// <summary>Gets an item from the YandexContestClient.Client.contests.item.problems.item collection</summary>
         /// <param name="position">alias</param>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.Item.WithAliasItemRequestBuilder"/></returns>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.Item.WithAliasItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::YandexContestClient.Client.Contests.Item.Problems.Item.WithAliasItemRequestBuilder"/></returns>
+        public global::YandexContestClient.Client.Contests.Item.Problems.Item.WithAliasItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("alias", position);
-                return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.Item.WithAliasItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new global::YandexContestClient.Client.Contests.Item.Problems.Item.WithAliasItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -39,7 +39,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problem
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -49,20 +49,20 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problem
         /// <summary>
         /// Required scope: &lt;code&gt;submit&lt;/code&gt; or &lt;code&gt;manage&lt;/code&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestProblems"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.ContestProblems"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestProblems?> GetAsync(Action<RequestConfiguration<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder.ProblemsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::YandexContestClient.Client.Models.ContestProblems?> GetAsync(Action<RequestConfiguration<global::YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder.ProblemsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestProblems> GetAsync(Action<RequestConfiguration<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder.ProblemsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::YandexContestClient.Client.Models.ContestProblems> GetAsync(Action<RequestConfiguration<global::YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder.ProblemsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestProblems>(requestInfo, global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestProblems.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::YandexContestClient.Client.Models.ContestProblems>(requestInfo, global::YandexContestClient.Client.Models.ContestProblems.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Required scope: &lt;code&gt;submit&lt;/code&gt; or &lt;code&gt;manage&lt;/code&gt;
@@ -71,11 +71,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problem
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder.ProblemsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder.ProblemsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder.ProblemsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder.ProblemsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -86,11 +86,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problem
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder WithUrl(string rawUrl)
+        public global::YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder(rawUrl, RequestAdapter);
+            return new global::YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Required scope: &lt;code&gt;submit&lt;/code&gt; or &lt;code&gt;manage&lt;/code&gt;

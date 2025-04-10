@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item.Submissions;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item
+using YandexContestClient.Client.Contests.Neurips.Item.Submissions;
+namespace YandexContestClient.Client.Contests.Neurips.Item
 {
     /// <summary>
     /// Builds and executes requests for operations under \contests\neurips\{contestId}
@@ -16,12 +16,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item
     public partial class WithContestItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The submissions property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item.Submissions.SubmissionsRequestBuilder Submissions
+        public global::YandexContestClient.Client.Contests.Neurips.Item.Submissions.SubmissionsRequestBuilder Submissions
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item.Submissions.SubmissionsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Neurips.Item.Submissions.SubmissionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item.WithContestItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Neurips.Item.WithContestItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -29,7 +29,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Neurips.Item.WithContestItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Neurips.Item.WithContestItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

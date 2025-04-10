@@ -8,8 +8,8 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Models;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.Item
+using YandexContestClient.Client.Models;
+namespace YandexContestClient.Client.Contests.Item.Groups.Item
 {
     /// <summary>
     /// Builds and executes requests for operations under \contests\{contestId}\groups\{groupId}
@@ -18,7 +18,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.
     public partial class WithGroupItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +26,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -58,11 +58,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task PatchAsync(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.UpdateGroupParticipationRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PatchAsync(global::YandexContestClient.Client.Models.UpdateGroupParticipationRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task PatchAsync(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.UpdateGroupParticipationRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PatchAsync(global::YandexContestClient.Client.Models.UpdateGroupParticipationRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -77,11 +77,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task PostAsync(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.RegisterGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::YandexContestClient.Client.Models.RegisterGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task PostAsync(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.RegisterGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::YandexContestClient.Client.Models.RegisterGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -115,11 +115,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.UpdateGroupParticipationRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::YandexContestClient.Client.Models.UpdateGroupParticipationRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.UpdateGroupParticipationRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::YandexContestClient.Client.Models.UpdateGroupParticipationRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -137,11 +137,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.RegisterGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::YandexContestClient.Client.Models.RegisterGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.RegisterGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::YandexContestClient.Client.Models.RegisterGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -154,11 +154,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder WithUrl(string rawUrl)
+        public global::YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::YandexContestClient.Client.Contests.Item.Groups.Item.WithGroupItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

@@ -8,7 +8,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Rejudge
+namespace YandexContestClient.Client.Submissions.Item.Rejudge
 {
     /// <summary>
     /// Builds and executes requests for operations under \submissions\{submissionId}\rejudge
@@ -17,7 +17,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Reju
     public partial class RejudgeRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -25,7 +25,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Reju
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -72,11 +72,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Reju
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder WithUrl(string rawUrl)
+        public global::YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder(rawUrl, RequestAdapter);
+            return new global::YandexContestClient.Client.Submissions.Item.Rejudge.RejudgeRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

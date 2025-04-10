@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
+namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
@@ -41,7 +41,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         public string ContestStartTime { get; set; }
 #endif
         /// <summary>The contestState property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ParticipantStatus_contestState? ContestState { get; set; }
+        public global::YandexContestClient.Client.Models.ParticipantStatus_contestState? ContestState { get; set; }
         /// <summary>Participant finish time, UTC</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,7 +89,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>The upsolvingAllowed property</summary>
         public bool? UpsolvingAllowed { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ParticipantStatus"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.ParticipantStatus"/> and sets the default values.
         /// </summary>
         public ParticipantStatus()
         {
@@ -98,12 +98,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ParticipantStatus"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.ParticipantStatus"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ParticipantStatus CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.ParticipantStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ParticipantStatus();
+            return new global::YandexContestClient.Client.Models.ParticipantStatus();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -117,7 +117,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
                 { "contestFinishTime", n => { ContestFinishTime = n.GetStringValue(); } },
                 { "contestInfinite", n => { ContestInfinite = n.GetBoolValue(); } },
                 { "contestStartTime", n => { ContestStartTime = n.GetStringValue(); } },
-                { "contestState", n => { ContestState = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ParticipantStatus_contestState>(); } },
+                { "contestState", n => { ContestState = n.GetEnumValue<global::YandexContestClient.Client.Models.ParticipantStatus_contestState>(); } },
                 { "participantFinishTime", n => { ParticipantFinishTime = n.GetStringValue(); } },
                 { "participantLeftTime", n => { ParticipantLeftTime = n.GetStringValue(); } },
                 { "participantLeftTimeMillis", n => { ParticipantLeftTimeMillis = n.GetLongValue(); } },
@@ -139,7 +139,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
             writer.WriteStringValue("contestFinishTime", ContestFinishTime);
             writer.WriteBoolValue("contestInfinite", ContestInfinite);
             writer.WriteStringValue("contestStartTime", ContestStartTime);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ParticipantStatus_contestState>("contestState", ContestState);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ParticipantStatus_contestState>("contestState", ContestState);
             writer.WriteStringValue("participantFinishTime", ParticipantFinishTime);
             writer.WriteStringValue("participantLeftTime", ParticipantLeftTime);
             writer.WriteLongValue("participantLeftTimeMillis", ParticipantLeftTimeMillis);

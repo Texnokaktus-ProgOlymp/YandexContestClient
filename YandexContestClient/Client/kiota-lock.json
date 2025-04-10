@@ -5,7 +5,7 @@
   "kiotaVersion": "1.25.1",
   "clientClassName": "ContestClient",
   "typeAccessModifier": "Public",
-  "clientNamespaceName": "Texnokaktus.ProgOlymp.YandexContestClient.Client",
+  "clientNamespaceName": "YandexContestClient.Client",
   "language": "CSharp",
   "usesBackingStore": false,
   "excludeBackwardCompatible": true,

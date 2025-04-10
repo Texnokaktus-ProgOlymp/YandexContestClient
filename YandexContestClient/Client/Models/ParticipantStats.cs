@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
+namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
@@ -45,10 +45,10 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>The runs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.BriefRunReport>? Runs { get; set; }
+        public List<global::YandexContestClient.Client.Models.BriefRunReport>? Runs { get; set; }
 #nullable restore
 #else
-        public List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.BriefRunReport> Runs { get; set; }
+        public List<global::YandexContestClient.Client.Models.BriefRunReport> Runs { get; set; }
 #endif
         /// <summary>The startedAt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,7 +59,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         public string StartedAt { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ParticipantStats"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.ParticipantStats"/> and sets the default values.
         /// </summary>
         public ParticipantStats()
         {
@@ -68,12 +68,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ParticipantStats"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.ParticipantStats"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ParticipantStats CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.ParticipantStats CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ParticipantStats();
+            return new global::YandexContestClient.Client.Models.ParticipantStats();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,7 +88,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "login", n => { Login = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "runs", n => { Runs = n.GetCollectionOfObjectValues<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.BriefRunReport>(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.BriefRunReport.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "runs", n => { Runs = n.GetCollectionOfObjectValues<global::YandexContestClient.Client.Models.BriefRunReport>(global::YandexContestClient.Client.Models.BriefRunReport.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "startedAt", n => { StartedAt = n.GetStringValue(); } },
             };
         }
@@ -104,7 +104,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("login", Login);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.BriefRunReport>("runs", Runs);
+            writer.WriteCollectionOfObjectValues<global::YandexContestClient.Client.Models.BriefRunReport>("runs", Runs);
             writer.WriteStringValue("startedAt", StartedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
+namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
@@ -41,10 +41,10 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>The limits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.CompilerLimit>? Limits { get; set; }
+        public List<global::YandexContestClient.Client.Models.CompilerLimit>? Limits { get; set; }
 #nullable restore
 #else
-        public List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.CompilerLimit> Limits { get; set; }
+        public List<global::YandexContestClient.Client.Models.CompilerLimit> Limits { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,15 +65,15 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>The statements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement>? Statements { get; set; }
+        public List<global::YandexContestClient.Client.Models.Statement>? Statements { get; set; }
 #nullable restore
 #else
-        public List<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement> Statements { get; set; }
+        public List<global::YandexContestClient.Client.Models.Statement> Statements { get; set; }
 #endif
         /// <summary>The testCount property</summary>
         public int? TestCount { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestProblem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.ContestProblem"/> and sets the default values.
         /// </summary>
         public ContestProblem()
         {
@@ -82,12 +82,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestProblem"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.ContestProblem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestProblem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.ContestProblem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestProblem();
+            return new global::YandexContestClient.Client.Models.ContestProblem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,10 +100,10 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
                 { "alias", n => { Alias = n.GetStringValue(); } },
                 { "compilers", n => { Compilers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "limits", n => { Limits = n.GetCollectionOfObjectValues<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.CompilerLimit>(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.CompilerLimit.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "limits", n => { Limits = n.GetCollectionOfObjectValues<global::YandexContestClient.Client.Models.CompilerLimit>(global::YandexContestClient.Client.Models.CompilerLimit.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "problemType", n => { ProblemType = n.GetStringValue(); } },
-                { "statements", n => { Statements = n.GetCollectionOfObjectValues<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement>(global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "statements", n => { Statements = n.GetCollectionOfObjectValues<global::YandexContestClient.Client.Models.Statement>(global::YandexContestClient.Client.Models.Statement.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "testCount", n => { TestCount = n.GetIntValue(); } },
             };
         }
@@ -117,10 +117,10 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
             writer.WriteStringValue("alias", Alias);
             writer.WriteCollectionOfPrimitiveValues<string>("compilers", Compilers);
             writer.WriteStringValue("id", Id);
-            writer.WriteCollectionOfObjectValues<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.CompilerLimit>("limits", Limits);
+            writer.WriteCollectionOfObjectValues<global::YandexContestClient.Client.Models.CompilerLimit>("limits", Limits);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("problemType", ProblemType);
-            writer.WriteCollectionOfObjectValues<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.Statement>("statements", Statements);
+            writer.WriteCollectionOfObjectValues<global::YandexContestClient.Client.Models.Statement>("statements", Statements);
             writer.WriteIntValue("testCount", TestCount);
             writer.WriteAdditionalData(AdditionalData);
         }

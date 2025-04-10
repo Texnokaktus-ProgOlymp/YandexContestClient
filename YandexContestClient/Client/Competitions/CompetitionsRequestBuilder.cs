@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions.Item;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions
+using YandexContestClient.Client.Competitions.Item;
+namespace YandexContestClient.Client.Competitions
 {
     /// <summary>
     /// Builds and executes requests for operations under \competitions
@@ -15,20 +15,20 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CompetitionsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>Gets an item from the Texnokaktus.ProgOlymp.YandexContestClient.Client.competitions.item collection</summary>
+        /// <summary>Gets an item from the YandexContestClient.Client.competitions.item collection</summary>
         /// <param name="position">competitionId</param>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions.Item.WithCompetitionItemRequestBuilder"/></returns>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions.Item.WithCompetitionItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::YandexContestClient.Client.Competitions.Item.WithCompetitionItemRequestBuilder"/></returns>
+        public global::YandexContestClient.Client.Competitions.Item.WithCompetitionItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("competitionId", position);
-                return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions.Item.WithCompetitionItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new global::YandexContestClient.Client.Competitions.Item.WithCompetitionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions.CompetitionsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Competitions.CompetitionsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +36,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Competitions.CompetitionsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Competitions.CompetitionsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

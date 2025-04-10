@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
+namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
@@ -39,9 +39,9 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         public string Message { get; set; }
 #endif
         /// <summary>The verdict property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.AdditionalSolutionCheckResult_verdict? Verdict { get; set; }
+        public global::YandexContestClient.Client.Models.AdditionalSolutionCheckResult_verdict? Verdict { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.AdditionalSolutionCheckResult"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.AdditionalSolutionCheckResult"/> and sets the default values.
         /// </summary>
         public AdditionalSolutionCheckResult()
         {
@@ -50,12 +50,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.AdditionalSolutionCheckResult"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.AdditionalSolutionCheckResult"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.AdditionalSolutionCheckResult CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.AdditionalSolutionCheckResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.AdditionalSolutionCheckResult();
+            return new global::YandexContestClient.Client.Models.AdditionalSolutionCheckResult();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +68,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
                 { "checkerName", n => { CheckerName = n.GetStringValue(); } },
                 { "errorMessage", n => { ErrorMessage = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "verdict", n => { Verdict = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.AdditionalSolutionCheckResult_verdict>(); } },
+                { "verdict", n => { Verdict = n.GetEnumValue<global::YandexContestClient.Client.Models.AdditionalSolutionCheckResult_verdict>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
             writer.WriteStringValue("checkerName", CheckerName);
             writer.WriteStringValue("errorMessage", ErrorMessage);
             writer.WriteStringValue("message", Message);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.AdditionalSolutionCheckResult_verdict>("verdict", Verdict);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.AdditionalSolutionCheckResult_verdict>("verdict", Verdict);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

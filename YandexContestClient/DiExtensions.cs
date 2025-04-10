@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Kiota.Abstractions.Authentication;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client;
 using YandexContestClient.Authentication;
+using YandexContestClient.Client;
 
 namespace YandexContestClient;
 

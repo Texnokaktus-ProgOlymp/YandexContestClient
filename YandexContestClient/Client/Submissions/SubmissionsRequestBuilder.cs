@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions
+using YandexContestClient.Client.Submissions.Item;
+namespace YandexContestClient.Client.Submissions
 {
     /// <summary>
     /// Builds and executes requests for operations under \submissions
@@ -15,20 +15,20 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubmissionsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>Gets an item from the Texnokaktus.ProgOlymp.YandexContestClient.Client.submissions.item collection</summary>
+        /// <summary>Gets an item from the YandexContestClient.Client.submissions.item collection</summary>
         /// <param name="position">submissionId</param>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.WithSubmissionItemRequestBuilder"/></returns>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.WithSubmissionItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::YandexContestClient.Client.Submissions.Item.WithSubmissionItemRequestBuilder"/></returns>
+        public global::YandexContestClient.Client.Submissions.Item.WithSubmissionItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("submissionId", position);
-                return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.Item.WithSubmissionItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new global::YandexContestClient.Client.Submissions.Item.WithSubmissionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.SubmissionsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Submissions.SubmissionsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +36,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Submissions.SubmissionsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Submissions.SubmissionsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

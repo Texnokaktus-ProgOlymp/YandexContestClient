@@ -8,17 +8,17 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Clarifications;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Messages;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Participants;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Participation;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Standings;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.StandingsExtended;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Models;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item
+using YandexContestClient.Client.Contests.Item.Clarifications;
+using YandexContestClient.Client.Contests.Item.Groups;
+using YandexContestClient.Client.Contests.Item.Messages;
+using YandexContestClient.Client.Contests.Item.Participants;
+using YandexContestClient.Client.Contests.Item.Participation;
+using YandexContestClient.Client.Contests.Item.Problems;
+using YandexContestClient.Client.Contests.Item.Standings;
+using YandexContestClient.Client.Contests.Item.StandingsExtended;
+using YandexContestClient.Client.Contests.Item.Submissions;
+using YandexContestClient.Client.Models;
+namespace YandexContestClient.Client.Contests.Item
 {
     /// <summary>
     /// Builds and executes requests for operations under \contests\{contestId}
@@ -27,52 +27,52 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item
     public partial class WithContestItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The clarifications property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Clarifications.ClarificationsRequestBuilder Clarifications
+        public global::YandexContestClient.Client.Contests.Item.Clarifications.ClarificationsRequestBuilder Clarifications
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Clarifications.ClarificationsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Clarifications.ClarificationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The groups property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder Groups
+        public global::YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder Groups
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Groups.GroupsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The messages property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Messages.MessagesRequestBuilder Messages
+        public global::YandexContestClient.Client.Contests.Item.Messages.MessagesRequestBuilder Messages
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Messages.MessagesRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Messages.MessagesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The participants property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Participants.ParticipantsRequestBuilder Participants
+        public global::YandexContestClient.Client.Contests.Item.Participants.ParticipantsRequestBuilder Participants
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Participants.ParticipantsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Participants.ParticipantsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The participation property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Participation.ParticipationRequestBuilder Participation
+        public global::YandexContestClient.Client.Contests.Item.Participation.ParticipationRequestBuilder Participation
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Participation.ParticipationRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Participation.ParticipationRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The problems property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder Problems
+        public global::YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder Problems
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Problems.ProblemsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The standings property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Standings.StandingsRequestBuilder Standings
+        public global::YandexContestClient.Client.Contests.Item.Standings.StandingsRequestBuilder Standings
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Standings.StandingsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Standings.StandingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The standingsExtended property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.StandingsExtended.StandingsExtendedRequestBuilder StandingsExtended
+        public global::YandexContestClient.Client.Contests.Item.StandingsExtended.StandingsExtendedRequestBuilder StandingsExtended
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.StandingsExtended.StandingsExtendedRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.StandingsExtended.StandingsExtendedRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The submissions property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.SubmissionsRequestBuilder Submissions
+        public global::YandexContestClient.Client.Contests.Item.Submissions.SubmissionsRequestBuilder Submissions
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.Submissions.SubmissionsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Contests.Item.Submissions.SubmissionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.WithContestItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.WithContestItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -80,7 +80,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.WithContestItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Contests.Item.WithContestItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -90,20 +90,20 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item
         /// <summary>
         /// Required scope: &lt;code&gt;submit&lt;/code&gt; or &lt;code&gt;manage&lt;/code&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.ContestDescription"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::YandexContestClient.Client.Models.ContestDescription?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::YandexContestClient.Client.Models.ContestDescription> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription>(requestInfo, global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestDescription.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::YandexContestClient.Client.Models.ContestDescription>(requestInfo, global::YandexContestClient.Client.Models.ContestDescription.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Required scope: &lt;code&gt;submit&lt;/code&gt; or &lt;code&gt;manage&lt;/code&gt;
@@ -127,11 +127,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.WithContestItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Contests.Item.WithContestItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.WithContestItemRequestBuilder WithUrl(string rawUrl)
+        public global::YandexContestClient.Client.Contests.Item.WithContestItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Contests.Item.WithContestItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::YandexContestClient.Client.Contests.Item.WithContestItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

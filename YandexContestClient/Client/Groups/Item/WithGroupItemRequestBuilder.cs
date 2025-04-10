@@ -8,9 +8,9 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item.Members;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Models;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item
+using YandexContestClient.Client.Groups.Item.Members;
+using YandexContestClient.Client.Models;
+namespace YandexContestClient.Client.Groups.Item
 {
     /// <summary>
     /// Builds and executes requests for operations under \groups\{groupId}
@@ -19,12 +19,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item
     public partial class WithGroupItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The members property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item.Members.MembersRequestBuilder Members
+        public global::YandexContestClient.Client.Groups.Item.Members.MembersRequestBuilder Members
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item.Members.MembersRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Groups.Item.Members.MembersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item.WithGroupItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Groups.Item.WithGroupItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -32,7 +32,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item.WithGroupItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Groups.Item.WithGroupItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -42,20 +42,20 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item
         /// <summary>
         /// Required scope: &lt;code&gt;manage&lt;/code&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.GroupInfo"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.GroupInfo"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.GroupInfo?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::YandexContestClient.Client.Models.GroupInfo?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.GroupInfo> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::YandexContestClient.Client.Models.GroupInfo> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.GroupInfo>(requestInfo, global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.GroupInfo.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::YandexContestClient.Client.Models.GroupInfo>(requestInfo, global::YandexContestClient.Client.Models.GroupInfo.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Required scope: &lt;code&gt;manage&lt;/code&gt;
@@ -79,11 +79,11 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item.WithGroupItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Groups.Item.WithGroupItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item.WithGroupItemRequestBuilder WithUrl(string rawUrl)
+        public global::YandexContestClient.Client.Groups.Item.WithGroupItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Groups.Item.WithGroupItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::YandexContestClient.Client.Groups.Item.WithGroupItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

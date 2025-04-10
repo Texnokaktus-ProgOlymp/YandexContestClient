@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
+namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
@@ -15,29 +15,29 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The showAnswer property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showAnswer? ShowAnswer { get; set; }
+        public global::YandexContestClient.Client.Models.ContestReportSettings_showAnswer? ShowAnswer { get; set; }
         /// <summary>The showCheckerOutput property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showCheckerOutput? ShowCheckerOutput { get; set; }
+        public global::YandexContestClient.Client.Models.ContestReportSettings_showCheckerOutput? ShowCheckerOutput { get; set; }
         /// <summary>The showInput property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showInput? ShowInput { get; set; }
+        public global::YandexContestClient.Client.Models.ContestReportSettings_showInput? ShowInput { get; set; }
         /// <summary>The showLightweightInterface property</summary>
         public bool? ShowLightweightInterface { get; set; }
         /// <summary>The showOutput property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showOutput? ShowOutput { get; set; }
+        public global::YandexContestClient.Client.Models.ContestReportSettings_showOutput? ShowOutput { get; set; }
         /// <summary>The showPostprocessOutput property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showPostprocessOutput? ShowPostprocessOutput { get; set; }
+        public global::YandexContestClient.Client.Models.ContestReportSettings_showPostprocessOutput? ShowPostprocessOutput { get; set; }
         /// <summary>The showReport property</summary>
         public bool? ShowReport { get; set; }
         /// <summary>The showScore property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showScore? ShowScore { get; set; }
+        public global::YandexContestClient.Client.Models.ContestReportSettings_showScore? ShowScore { get; set; }
         /// <summary>The showStderr property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showStderr? ShowStderr { get; set; }
+        public global::YandexContestClient.Client.Models.ContestReportSettings_showStderr? ShowStderr { get; set; }
         /// <summary>The showTestNumber property</summary>
         public bool? ShowTestNumber { get; set; }
         /// <summary>The showUsedResources property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showUsedResources? ShowUsedResources { get; set; }
+        public global::YandexContestClient.Client.Models.ContestReportSettings_showUsedResources? ShowUsedResources { get; set; }
         /// <summary>The showVerdict property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showVerdict? ShowVerdict { get; set; }
+        public global::YandexContestClient.Client.Models.ContestReportSettings_showVerdict? ShowVerdict { get; set; }
         /// <summary>The stopOnFirstFail property</summary>
         public bool? StopOnFirstFail { get; set; }
         /// <summary>The stopOnFirstFailInTestSet property</summary>
@@ -49,7 +49,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>The useAcNotOk property</summary>
         public bool? UseAcNotOk { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.ContestReportSettings"/> and sets the default values.
         /// </summary>
         public ContestReportSettings()
         {
@@ -58,12 +58,12 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.ContestReportSettings"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.ContestReportSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings();
+            return new global::YandexContestClient.Client.Models.ContestReportSettings();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,18 +73,18 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "showAnswer", n => { ShowAnswer = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showAnswer>(); } },
-                { "showCheckerOutput", n => { ShowCheckerOutput = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showCheckerOutput>(); } },
-                { "showInput", n => { ShowInput = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showInput>(); } },
+                { "showAnswer", n => { ShowAnswer = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showAnswer>(); } },
+                { "showCheckerOutput", n => { ShowCheckerOutput = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showCheckerOutput>(); } },
+                { "showInput", n => { ShowInput = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showInput>(); } },
                 { "showLightweightInterface", n => { ShowLightweightInterface = n.GetBoolValue(); } },
-                { "showOutput", n => { ShowOutput = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showOutput>(); } },
-                { "showPostprocessOutput", n => { ShowPostprocessOutput = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showPostprocessOutput>(); } },
+                { "showOutput", n => { ShowOutput = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showOutput>(); } },
+                { "showPostprocessOutput", n => { ShowPostprocessOutput = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showPostprocessOutput>(); } },
                 { "showReport", n => { ShowReport = n.GetBoolValue(); } },
-                { "showScore", n => { ShowScore = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showScore>(); } },
-                { "showStderr", n => { ShowStderr = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showStderr>(); } },
+                { "showScore", n => { ShowScore = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showScore>(); } },
+                { "showStderr", n => { ShowStderr = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showStderr>(); } },
                 { "showTestNumber", n => { ShowTestNumber = n.GetBoolValue(); } },
-                { "showUsedResources", n => { ShowUsedResources = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showUsedResources>(); } },
-                { "showVerdict", n => { ShowVerdict = n.GetEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showVerdict>(); } },
+                { "showUsedResources", n => { ShowUsedResources = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showUsedResources>(); } },
+                { "showVerdict", n => { ShowVerdict = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showVerdict>(); } },
                 { "stopOnFirstFail", n => { StopOnFirstFail = n.GetBoolValue(); } },
                 { "stopOnFirstFailInTestSet", n => { StopOnFirstFailInTestSet = n.GetBoolValue(); } },
                 { "stopOnSampleFail", n => { StopOnSampleFail = n.GetBoolValue(); } },
@@ -99,18 +99,18 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showAnswer>("showAnswer", ShowAnswer);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showCheckerOutput>("showCheckerOutput", ShowCheckerOutput);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showInput>("showInput", ShowInput);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showAnswer>("showAnswer", ShowAnswer);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showCheckerOutput>("showCheckerOutput", ShowCheckerOutput);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showInput>("showInput", ShowInput);
             writer.WriteBoolValue("showLightweightInterface", ShowLightweightInterface);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showOutput>("showOutput", ShowOutput);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showPostprocessOutput>("showPostprocessOutput", ShowPostprocessOutput);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showOutput>("showOutput", ShowOutput);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showPostprocessOutput>("showPostprocessOutput", ShowPostprocessOutput);
             writer.WriteBoolValue("showReport", ShowReport);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showScore>("showScore", ShowScore);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showStderr>("showStderr", ShowStderr);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showScore>("showScore", ShowScore);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showStderr>("showStderr", ShowStderr);
             writer.WriteBoolValue("showTestNumber", ShowTestNumber);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showUsedResources>("showUsedResources", ShowUsedResources);
-            writer.WriteEnumValue<global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Models.ContestReportSettings_showVerdict>("showVerdict", ShowVerdict);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showUsedResources>("showUsedResources", ShowUsedResources);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestReportSettings_showVerdict>("showVerdict", ShowVerdict);
             writer.WriteBoolValue("stopOnFirstFail", StopOnFirstFail);
             writer.WriteBoolValue("stopOnFirstFailInTestSet", StopOnFirstFailInTestSet);
             writer.WriteBoolValue("stopOnSampleFail", StopOnSampleFail);

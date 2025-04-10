@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Capacity;
-using Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect;
-namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Service
+using YandexContestClient.Client.Service.Capacity;
+using YandexContestClient.Client.Service.Introspect;
+namespace YandexContestClient.Client.Service
 {
     /// <summary>
     /// Builds and executes requests for operations under \service
@@ -17,17 +17,17 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Service
     public partial class ServiceRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The capacity property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Capacity.CapacityRequestBuilder Capacity
+        public global::YandexContestClient.Client.Service.Capacity.CapacityRequestBuilder Capacity
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Capacity.CapacityRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Service.Capacity.CapacityRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The introspect property</summary>
-        public global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder Introspect
+        public global::YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder Introspect
         {
-            get => new global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::YandexContestClient.Client.Service.Introspect.IntrospectRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.ServiceRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Service.ServiceRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -35,7 +35,7 @@ namespace Texnokaktus.ProgOlymp.YandexContestClient.Client.Service
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Texnokaktus.ProgOlymp.YandexContestClient.Client.Service.ServiceRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Service.ServiceRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
