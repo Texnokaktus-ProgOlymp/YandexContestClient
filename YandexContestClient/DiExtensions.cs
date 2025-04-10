@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Authentication;
+using Microsoft.Kiota.Http.HttpClientLibrary;
 using YandexContestClient.Authentication;
 using YandexContestClient.Client;
 
@@ -17,8 +19,10 @@ public static class DiExtensions
                 .AddScoped<IAccessTokenProvider, TAccessTokenProvider>(implementationFactory);
 
     public static IServiceCollection AddYandexContestClient(this IServiceCollection services) =>
-        services.AddScoped<ContestClient>();
+        services.AddScoped<IRequestAdapter, HttpClientRequestAdapter>()
+                .AddScoped<ContestClient>();
 
     public static IServiceCollection AddYandexContestClient(this IServiceCollection services, Func<IServiceProvider, ContestClient> implementationFactory) =>
-        services.AddScoped(implementationFactory);
+        services.AddScoped<IRequestAdapter, HttpClientRequestAdapter>()
+                .AddScoped(implementationFactory);
 }
