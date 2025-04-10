@@ -1,0 +1,34 @@
+{
+  "descriptionHash": "C7C0823B8D9AE9F3261CEA39FC19619EE582F2FE23599F9D909A9B801DCBAAE7554CAD70EF4281DA90161EB4F5BEB6F121AA7B26E33A0F59DDC0D7E34DB4A077",
+  "descriptionLocation": "https://api.contest.yandex.net/api/public/v2/api-docs?group=v2",
+  "lockFileVersion": "1.0.0",
+  "kiotaVersion": "1.25.1",
+  "clientClassName": "ContestClient",
+  "typeAccessModifier": "Public",
+  "clientNamespaceName": "Texnokaktus.ProgOlymp.YandexContestClient.Client",
+  "language": "CSharp",
+  "usesBackingStore": false,
+  "excludeBackwardCompatible": true,
+  "includeAdditionalData": true,
+  "disableSSLValidation": false,
+  "serializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Multipart.MultipartSerializationWriterFactory"
+  ],
+  "deserializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Text.TextParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Form.FormParseNodeFactory"
+  ],
+  "structuredMimeTypes": [
+    "application/json",
+    "text/plain;q=0.9",
+    "application/x-www-form-urlencoded;q=0.2",
+    "multipart/form-data;q=0.1"
+  ],
+  "includePatterns": [],
+  "excludePatterns": [],
+  "disabledValidationRules": []
+}
