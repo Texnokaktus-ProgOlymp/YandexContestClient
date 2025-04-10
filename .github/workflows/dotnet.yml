@@ -1,0 +1,32 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+      - name: Setup NuGet
+        run: dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/Texnokaktus-ProgOlymp/index.json"
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore
+      - name: Version
+        id: get-version
+        run: echo "version=1.${{ github.run_number }}.${{ github.run_attempt }}" >> $GITHUB_OUTPUT
+      - name: Pack
+        run: dotnet pack --configuration Release /p:Version=${{ steps.get-version.outputs.version }}
+      - name: Push
+        run: dotnet nuget push "YandexContestClient/bin/Release/YandexContestClient.*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
