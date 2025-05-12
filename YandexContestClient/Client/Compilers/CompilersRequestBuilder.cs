@@ -8,6 +8,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
+using YandexContestClient.Client.Compilers.Item;
 using YandexContestClient.Client.Models;
 namespace YandexContestClient.Client.Compilers
 {
@@ -17,6 +18,18 @@ namespace YandexContestClient.Client.Compilers
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CompilersRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>Gets an item from the YandexContestClient.Client.compilers.item collection</summary>
+        /// <param name="position">compilerId</param>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Compilers.Item.WithCompilerItemRequestBuilder"/></returns>
+        public global::YandexContestClient.Client.Compilers.Item.WithCompilerItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("compilerId", position);
+                return new global::YandexContestClient.Client.Compilers.Item.WithCompilerItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::YandexContestClient.Client.Compilers.CompilersRequestBuilder"/> and sets the default values.
         /// </summary>

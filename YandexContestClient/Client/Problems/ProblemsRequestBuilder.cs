@@ -8,6 +8,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
+using YandexContestClient.Client.Problems.Item;
 namespace YandexContestClient.Client.Problems
 {
     /// <summary>
@@ -16,6 +17,18 @@ namespace YandexContestClient.Client.Problems
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProblemsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>Gets an item from the YandexContestClient.Client.problems.item collection</summary>
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Problems.Item.ProblemsItemRequestBuilder"/></returns>
+        public global::YandexContestClient.Client.Problems.Item.ProblemsItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("id1", position);
+                return new global::YandexContestClient.Client.Problems.Item.ProblemsItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::YandexContestClient.Client.Problems.ProblemsRequestBuilder"/> and sets the default values.
         /// </summary>
