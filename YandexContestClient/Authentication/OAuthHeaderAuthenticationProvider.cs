@@ -5,28 +5,27 @@ using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Authentication;
 
-namespace YandexContestClient.Authentication
+namespace YandexContestClient.Authentication;
+
+internal sealed class OAuthHeaderAuthenticationProvider(IAccessTokenProvider accessTokenProvider) : IAuthenticationProvider
 {
-    internal sealed class OAuthHeaderAuthenticationProvider(IAccessTokenProvider accessTokenProvider) : IAuthenticationProvider
+    private const string AuthorizationHeaderKey = "Authorization";
+    private const string AuthorizationHeaderValuePrefix = "OAuth";
+
+    public async Task AuthenticateRequestAsync(RequestInformation request,
+                                               Dictionary<string, object>? additionalAuthenticationContext = null,
+                                               CancellationToken cancellationToken = default)
     {
-        private const string AuthorizationHeaderKey = "Authorization";
-        private const string AuthorizationHeaderValuePrefix = "OAuth";
+        if (request is null) throw new ArgumentNullException(nameof(request));
 
-        public async Task AuthenticateRequestAsync(RequestInformation request,
-                                                   Dictionary<string, object>? additionalAuthenticationContext = null,
-                                                   CancellationToken cancellationToken = default)
+        request.Headers.Remove(AuthorizationHeaderKey);
+
+        if (!request.Headers.ContainsKey(AuthorizationHeaderKey))
         {
-            if (request is null) throw new ArgumentNullException(nameof(request));
+            var accessToken = await accessTokenProvider.GetAuthorizationTokenAsync(request.URI, additionalAuthenticationContext, cancellationToken);
 
-            request.Headers.Remove(AuthorizationHeaderKey);
-
-            if (!request.Headers.ContainsKey(AuthorizationHeaderKey))
-            {
-                var accessToken = await accessTokenProvider.GetAuthorizationTokenAsync(request.URI, additionalAuthenticationContext, cancellationToken);
-
-                if(!string.IsNullOrEmpty(accessToken))
-                    request.Headers.Add(AuthorizationHeaderKey, $"{AuthorizationHeaderValuePrefix} {accessToken}");
-            }
+            if(!string.IsNullOrEmpty(accessToken))
+                request.Headers.Add(AuthorizationHeaderKey, $"{AuthorizationHeaderValuePrefix} {accessToken}");
         }
     }
 }
