@@ -34,6 +34,10 @@ namespace YandexContestClient.Client.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>The standingsEnabled property</summary>
+        public bool? StandingsEnabled { get; set; }
+        /// <summary>The standingsPlugin property</summary>
+        public global::YandexContestClient.Client.Models.ContestDescription_standingsPlugin? StandingsPlugin { get; set; }
         /// <summary>Contest start time, UTC</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,6 +79,8 @@ namespace YandexContestClient.Client.Models
                 { "duration", n => { Duration = n.GetLongValue(); } },
                 { "freezeTime", n => { FreezeTime = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "standingsEnabled", n => { StandingsEnabled = n.GetBoolValue(); } },
+                { "standingsPlugin", n => { StandingsPlugin = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestDescription_standingsPlugin>(); } },
                 { "startTime", n => { StartTime = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestDescription_type>(); } },
                 { "upsolvingAllowance", n => { UpsolvingAllowance = n.GetEnumValue<global::YandexContestClient.Client.Models.ContestDescription_upsolvingAllowance>(); } },
@@ -91,6 +97,8 @@ namespace YandexContestClient.Client.Models
             writer.WriteLongValue("duration", Duration);
             writer.WriteLongValue("freezeTime", FreezeTime);
             writer.WriteStringValue("name", Name);
+            writer.WriteBoolValue("standingsEnabled", StandingsEnabled);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestDescription_standingsPlugin>("standingsPlugin", StandingsPlugin);
             writer.WriteStringValue("startTime", StartTime);
             writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestDescription_type>("type", Type);
             writer.WriteEnumValue<global::YandexContestClient.Client.Models.ContestDescription_upsolvingAllowance>("upsolvingAllowance", UpsolvingAllowance);

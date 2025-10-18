@@ -28,7 +28,7 @@ namespace YandexContestClient.Client.Contests.Item.Standings
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StandingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contests/{contestId}/standings{?forJudge*,locale*,page*,pageSize*,participantSearch*,showExternal*,showVirtual*,userGroupId*}", pathParameters)
+        public StandingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contests/{contestId}/standings{?forJudge*,locale*,page*,pageSize*,participantId*,participantSearch*,showExternal*,showVirtual*,userGroupId*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace YandexContestClient.Client.Contests.Item.Standings
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StandingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contests/{contestId}/standings{?forJudge*,locale*,page*,pageSize*,participantSearch*,showExternal*,showVirtual*,userGroupId*}", rawUrl)
+        public StandingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contests/{contestId}/standings{?forJudge*,locale*,page*,pageSize*,participantId*,participantSearch*,showExternal*,showVirtual*,userGroupId*}", rawUrl)
         {
         }
         /// <summary>
@@ -106,6 +106,8 @@ namespace YandexContestClient.Client.Contests.Item.Standings
             public int? Page { get; set; }
             [QueryParameter("pageSize")]
             public int? PageSize { get; set; }
+            [QueryParameter("participantId")]
+            public long? ParticipantId { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("participantSearch")]

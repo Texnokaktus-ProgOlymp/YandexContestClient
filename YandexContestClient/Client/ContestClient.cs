@@ -13,6 +13,7 @@ using System;
 using YandexContestClient.Client.Competitions;
 using YandexContestClient.Client.Compilers;
 using YandexContestClient.Client.Contests;
+using YandexContestClient.Client.Gitlab;
 using YandexContestClient.Client.Groups;
 using YandexContestClient.Client.Participants;
 using YandexContestClient.Client.Problems;
@@ -42,6 +43,11 @@ namespace YandexContestClient.Client
         public global::YandexContestClient.Client.Contests.ContestsRequestBuilder Contests
         {
             get => new global::YandexContestClient.Client.Contests.ContestsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The gitlab property</summary>
+        public global::YandexContestClient.Client.Gitlab.GitlabRequestBuilder Gitlab
+        {
+            get => new global::YandexContestClient.Client.Gitlab.GitlabRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The groups property</summary>
         public global::YandexContestClient.Client.Groups.GroupsRequestBuilder Groups

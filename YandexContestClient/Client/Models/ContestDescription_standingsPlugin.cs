@@ -5,40 +5,48 @@ namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum ProblemSettings_problemType
+    public enum ContestDescription_standingsPlugin
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "PROBLEM_WITH_CHECKER")]
+        [EnumMember(Value = "calculator")]
         #pragma warning disable CS1591
-        PROBLEM_WITH_CHECKER,
+        Calculator,
         #pragma warning restore CS1591
-        [EnumMember(Value = "INTERACTIVE_PROBLEM")]
+        [EnumMember(Value = "cpr")]
         #pragma warning disable CS1591
-        INTERACTIVE_PROBLEM,
+        Cpr,
         #pragma warning restore CS1591
-        [EnumMember(Value = "TEXT_ANSWER_PROBLEM")]
+        [EnumMember(Value = "ioi")]
         #pragma warning disable CS1591
-        TEXT_ANSWER_PROBLEM,
+        Ioi,
         #pragma warning restore CS1591
-        [EnumMember(Value = "TEST_PROBLEM")]
+        [EnumMember(Value = "tcm/time")]
         #pragma warning disable CS1591
-        TEST_PROBLEM,
+        TcmTime,
         #pragma warning restore CS1591
-        [EnumMember(Value = "PROBLEM_WITH_CUSTOM_CONFIG")]
+        [EnumMember(Value = "tcm")]
         #pragma warning disable CS1591
-        PROBLEM_WITH_CUSTOM_CONFIG,
+        Tcm,
         #pragma warning restore CS1591
-        [EnumMember(Value = "RUN_TWICE_PROBLEM")]
+        [EnumMember(Value = "multiple_results")]
         #pragma warning disable CS1591
-        RUN_TWICE_PROBLEM,
+        Multiple_results,
         #pragma warning restore CS1591
-        [EnumMember(Value = "PICTURE_PROBLEM")]
+        [EnumMember(Value = "shad")]
         #pragma warning disable CS1591
-        PICTURE_PROBLEM,
+        Shad,
         #pragma warning restore CS1591
-        [EnumMember(Value = "GITLAB_PROBLEM")]
+        [EnumMember(Value = "searchcup")]
         #pragma warning disable CS1591
-        GITLAB_PROBLEM,
+        Searchcup,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "acm")]
+        #pragma warning disable CS1591
+        Acm,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "scoring")]
+        #pragma warning disable CS1591
+        Scoring,
         #pragma warning restore CS1591
     }
 }

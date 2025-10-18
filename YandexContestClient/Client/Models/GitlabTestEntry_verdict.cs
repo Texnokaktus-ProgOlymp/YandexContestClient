@@ -5,40 +5,44 @@ namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum ProblemSettings_problemType
+    public enum GitlabTestEntry_verdict
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "PROBLEM_WITH_CHECKER")]
+        [EnumMember(Value = "OK")]
         #pragma warning disable CS1591
-        PROBLEM_WITH_CHECKER,
+        OK,
         #pragma warning restore CS1591
-        [EnumMember(Value = "INTERACTIVE_PROBLEM")]
+        [EnumMember(Value = "WrongAnswer")]
         #pragma warning disable CS1591
-        INTERACTIVE_PROBLEM,
+        WrongAnswer,
         #pragma warning restore CS1591
-        [EnumMember(Value = "TEXT_ANSWER_PROBLEM")]
+        [EnumMember(Value = "PresentationError")]
         #pragma warning disable CS1591
-        TEXT_ANSWER_PROBLEM,
+        PresentationError,
         #pragma warning restore CS1591
-        [EnumMember(Value = "TEST_PROBLEM")]
+        [EnumMember(Value = "TimeLimitExceeded")]
         #pragma warning disable CS1591
-        TEST_PROBLEM,
+        TimeLimitExceeded,
         #pragma warning restore CS1591
-        [EnumMember(Value = "PROBLEM_WITH_CUSTOM_CONFIG")]
+        [EnumMember(Value = "MemoryLimitExceeded")]
         #pragma warning disable CS1591
-        PROBLEM_WITH_CUSTOM_CONFIG,
+        MemoryLimitExceeded,
         #pragma warning restore CS1591
-        [EnumMember(Value = "RUN_TWICE_PROBLEM")]
+        [EnumMember(Value = "IdlenessLimitExceeded")]
         #pragma warning disable CS1591
-        RUN_TWICE_PROBLEM,
+        IdlenessLimitExceeded,
         #pragma warning restore CS1591
-        [EnumMember(Value = "PICTURE_PROBLEM")]
+        [EnumMember(Value = "OutputLimitExceeded")]
         #pragma warning disable CS1591
-        PICTURE_PROBLEM,
+        OutputLimitExceeded,
         #pragma warning restore CS1591
-        [EnumMember(Value = "GITLAB_PROBLEM")]
+        [EnumMember(Value = "RuntimeError")]
         #pragma warning disable CS1591
-        GITLAB_PROBLEM,
+        RuntimeError,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "Crash")]
+        #pragma warning disable CS1591
+        Crash,
         #pragma warning restore CS1591
     }
 }
