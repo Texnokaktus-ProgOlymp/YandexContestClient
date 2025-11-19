@@ -1,6 +1,7 @@
 using System;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Kiota.Abstractions.Authentication;
+using Microsoft.Kiota.Http.HttpClientLibrary;
 using YandexContestClient.Authentication;
 
 namespace YandexContestClient;
@@ -20,6 +21,13 @@ internal class YandexContestClientConfigurator(IServiceCollection services) : IY
     {
         services.AddScoped<IAuthenticationProvider, OAuthHeaderAuthenticationProvider>()
                 .AddScoped<IAccessTokenProvider, TAccessTokenProvider>(implementationFactory);
+
+        return this;
+    }
+
+    public IYandexContestClientConfigurator WithObservability()
+    {
+        services.AddScoped<ObservabilityOptions>(_ => new());
 
         return this;
     }
