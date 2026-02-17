@@ -13,20 +13,35 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: 10.0.x
+
       - name: Setup NuGet
         run: dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/Texnokaktus-ProgOlymp/index.json"
+
       - name: Restore dependencies
         run: dotnet restore
+
       - name: Build
         run: dotnet build --no-restore
+
       - name: Version
         id: get-version
         run: echo "version=1.${{ github.run_number }}.${{ github.run_attempt }}" >> $GITHUB_OUTPUT
+
       - name: Pack
         run: dotnet pack --configuration Release /p:Version=${{ steps.get-version.outputs.version }}
+
       - name: Push
         run: dotnet nuget push "YandexContestClient/bin/Release/YandexContestClient.*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
+
+      - name: Push tag
+        run: |
+          tag=${{ steps.get-version.outputs.version }}
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git tag "v${tag}"
+          git push origin "v${tag}"
