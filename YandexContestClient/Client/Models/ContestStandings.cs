@@ -38,6 +38,8 @@ namespace YandexContestClient.Client.Models
 #else
         public List<global::YandexContestClient.Client.Models.ContestStandingsTitle> Titles { get; set; }
 #endif
+        /// <summary>The totalEntitiesCount property</summary>
+        public long? TotalEntitiesCount { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.ContestStandings"/> and sets the default values.
         /// </summary>
@@ -66,6 +68,7 @@ namespace YandexContestClient.Client.Models
                 { "rows", n => { Rows = n.GetCollectionOfObjectValues<global::YandexContestClient.Client.Models.ContestStandingsRow>(global::YandexContestClient.Client.Models.ContestStandingsRow.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "statistics", n => { Statistics = n.GetObjectValue<global::YandexContestClient.Client.Models.ContestStatistics>(global::YandexContestClient.Client.Models.ContestStatistics.CreateFromDiscriminatorValue); } },
                 { "titles", n => { Titles = n.GetCollectionOfObjectValues<global::YandexContestClient.Client.Models.ContestStandingsTitle>(global::YandexContestClient.Client.Models.ContestStandingsTitle.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "totalEntitiesCount", n => { TotalEntitiesCount = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -78,6 +81,7 @@ namespace YandexContestClient.Client.Models
             writer.WriteCollectionOfObjectValues<global::YandexContestClient.Client.Models.ContestStandingsRow>("rows", Rows);
             writer.WriteObjectValue<global::YandexContestClient.Client.Models.ContestStatistics>("statistics", Statistics);
             writer.WriteCollectionOfObjectValues<global::YandexContestClient.Client.Models.ContestStandingsTitle>("titles", Titles);
+            writer.WriteLongValue("totalEntitiesCount", TotalEntitiesCount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

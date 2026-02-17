@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "9BAED2FC5A29780DFF595E8693FB25C1BDC645369827E24365329667B2EA685FFE71379ADE92D4A3038E6B655931639299AA191F025DEE9181D1E9608B582A99",
+  "descriptionHash": "26A48AB4963C02A78D36B7BB9CAC0328E844C357B6E3C812ED5A50615DAD461DE178A9C5D88E32CD6A1A0BD683DBFCA9B2F0B74E54FA7E5426D4B730240714C3",
   "descriptionLocation": "https://api.contest.yandex.net/api/public/v2/api-docs?group=v2",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.29.0",
+  "kiotaVersion": "1.30.0",
   "clientClassName": "ContestClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "YandexContestClient.Client",
