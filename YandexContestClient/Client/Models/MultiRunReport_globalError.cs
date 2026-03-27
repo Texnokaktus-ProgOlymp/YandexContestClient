@@ -20,5 +20,9 @@ namespace YandexContestClient.Client.Models
         #pragma warning disable CS1591
         GLOBAL_TL,
         #pragma warning restore CS1591
+        [EnumMember(Value = "CONFIGURATION_ERROR")]
+        #pragma warning disable CS1591
+        CONFIGURATION_ERROR,
+        #pragma warning restore CS1591
     }
 }

@@ -40,5 +40,9 @@ namespace YandexContestClient.Client.Models
         #pragma warning disable CS1591
         GITLAB_PROBLEM,
         #pragma warning restore CS1591
+        [EnumMember(Value = "JUPYTER_PROBLEM")]
+        #pragma warning disable CS1591
+        JUPYTER_PROBLEM,
+        #pragma warning restore CS1591
     }
 }
