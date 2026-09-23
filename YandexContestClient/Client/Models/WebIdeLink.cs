@@ -9,37 +9,53 @@ namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CreateGroupRequest : IAdditionalDataHolder, IParsable
+    public partial class WebIdeLink : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name property</summary>
+        /// <summary>The login property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Login { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Login { get; set; }
 #endif
-        /// <summary>The type property</summary>
-        public global::YandexContestClient.Client.Models.CreateGroupRequest_type? Type { get; set; }
+        /// <summary>The participantId property</summary>
+        public long? ParticipantId { get; set; }
+        /// <summary>The token property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Token { get; set; }
+#nullable restore
+#else
+        public string Token { get; set; }
+#endif
+        /// <summary>The url property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Url { get; set; }
+#nullable restore
+#else
+        public string Url { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.CreateGroupRequest"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.WebIdeLink"/> and sets the default values.
         /// </summary>
-        public CreateGroupRequest()
+        public WebIdeLink()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::YandexContestClient.Client.Models.CreateGroupRequest"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.WebIdeLink"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::YandexContestClient.Client.Models.CreateGroupRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.WebIdeLink CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::YandexContestClient.Client.Models.CreateGroupRequest();
+            return new global::YandexContestClient.Client.Models.WebIdeLink();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,8 +65,10 @@ namespace YandexContestClient.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::YandexContestClient.Client.Models.CreateGroupRequest_type>(); } },
+                { "login", n => { Login = n.GetStringValue(); } },
+                { "participantId", n => { ParticipantId = n.GetLongValue(); } },
+                { "token", n => { Token = n.GetStringValue(); } },
+                { "url", n => { Url = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -60,8 +78,10 @@ namespace YandexContestClient.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::YandexContestClient.Client.Models.CreateGroupRequest_type>("type", Type);
+            writer.WriteStringValue("login", Login);
+            writer.WriteLongValue("participantId", ParticipantId);
+            writer.WriteStringValue("token", Token);
+            writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

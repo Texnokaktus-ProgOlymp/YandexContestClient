@@ -9,37 +9,35 @@ namespace YandexContestClient.Client.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CreateGroupRequest : IAdditionalDataHolder, IParsable
+    public partial class ListJupyterServerFilesQueryResult : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name property</summary>
+        /// <summary>The files property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public List<global::YandexContestClient.Client.Models.JupyterServerFileEntry>? Files { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public List<global::YandexContestClient.Client.Models.JupyterServerFileEntry> Files { get; set; }
 #endif
-        /// <summary>The type property</summary>
-        public global::YandexContestClient.Client.Models.CreateGroupRequest_type? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.CreateGroupRequest"/> and sets the default values.
+        /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.ListJupyterServerFilesQueryResult"/> and sets the default values.
         /// </summary>
-        public CreateGroupRequest()
+        public ListJupyterServerFilesQueryResult()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::YandexContestClient.Client.Models.CreateGroupRequest"/></returns>
+        /// <returns>A <see cref="global::YandexContestClient.Client.Models.ListJupyterServerFilesQueryResult"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::YandexContestClient.Client.Models.CreateGroupRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::YandexContestClient.Client.Models.ListJupyterServerFilesQueryResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::YandexContestClient.Client.Models.CreateGroupRequest();
+            return new global::YandexContestClient.Client.Models.ListJupyterServerFilesQueryResult();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,8 +47,7 @@ namespace YandexContestClient.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::YandexContestClient.Client.Models.CreateGroupRequest_type>(); } },
+                { "files", n => { Files = n.GetCollectionOfObjectValues<global::YandexContestClient.Client.Models.JupyterServerFileEntry>(global::YandexContestClient.Client.Models.JupyterServerFileEntry.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -60,8 +57,7 @@ namespace YandexContestClient.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::YandexContestClient.Client.Models.CreateGroupRequest_type>("type", Type);
+            writer.WriteCollectionOfObjectValues<global::YandexContestClient.Client.Models.JupyterServerFileEntry>("files", Files);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

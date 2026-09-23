@@ -24,6 +24,8 @@ namespace YandexContestClient.Client.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>The type property</summary>
+        public global::YandexContestClient.Client.Models.GroupInfo_type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::YandexContestClient.Client.Models.GroupInfo"/> and sets the default values.
         /// </summary>
@@ -51,6 +53,7 @@ namespace YandexContestClient.Client.Models
             {
                 { "memberCount", n => { MemberCount = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::YandexContestClient.Client.Models.GroupInfo_type>(); } },
             };
         }
         /// <summary>
@@ -62,6 +65,7 @@ namespace YandexContestClient.Client.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("memberCount", MemberCount);
             writer.WriteStringValue("name", Name);
+            writer.WriteEnumValue<global::YandexContestClient.Client.Models.GroupInfo_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

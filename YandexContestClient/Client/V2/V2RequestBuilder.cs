@@ -11,12 +11,15 @@ using YandexContestClient.Client.V2.Compilers;
 using YandexContestClient.Client.V2.Contests;
 using YandexContestClient.Client.V2.Gitlab;
 using YandexContestClient.Client.V2.Groups;
+using YandexContestClient.Client.V2.Jupyter;
 using YandexContestClient.Client.V2.Participants;
 using YandexContestClient.Client.V2.Problems;
 using YandexContestClient.Client.V2.Service;
 using YandexContestClient.Client.V2.Submissions;
 using YandexContestClient.Client.V2.Teams;
 using YandexContestClient.Client.V2.User;
+using YandexContestClient.Client.V2.WebIde;
+using YandexContestClient.Client.V2.WebIdeLinks;
 namespace YandexContestClient.Client.V2
 {
     /// <summary>
@@ -50,6 +53,11 @@ namespace YandexContestClient.Client.V2
         {
             get => new global::YandexContestClient.Client.V2.Groups.GroupsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The jupyter property</summary>
+        public global::YandexContestClient.Client.V2.Jupyter.JupyterRequestBuilder Jupyter
+        {
+            get => new global::YandexContestClient.Client.V2.Jupyter.JupyterRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The participants property</summary>
         public global::YandexContestClient.Client.V2.Participants.ParticipantsRequestBuilder Participants
         {
@@ -79,6 +87,16 @@ namespace YandexContestClient.Client.V2
         public global::YandexContestClient.Client.V2.User.UserRequestBuilder User
         {
             get => new global::YandexContestClient.Client.V2.User.UserRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The webIde property</summary>
+        public global::YandexContestClient.Client.V2.WebIde.WebIdeRequestBuilder WebIde
+        {
+            get => new global::YandexContestClient.Client.V2.WebIde.WebIdeRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The webIdeLinks property</summary>
+        public global::YandexContestClient.Client.V2.WebIdeLinks.WebIdeLinksRequestBuilder WebIdeLinks
+        {
+            get => new global::YandexContestClient.Client.V2.WebIdeLinks.WebIdeLinksRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::YandexContestClient.Client.V2.V2RequestBuilder"/> and sets the default values.

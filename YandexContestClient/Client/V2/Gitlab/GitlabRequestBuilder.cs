@@ -6,7 +6,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
+using YandexContestClient.Client.V2.Gitlab.RemoteFile;
 using YandexContestClient.Client.V2.Gitlab.Report;
+using YandexContestClient.Client.V2.Gitlab.Source;
+using YandexContestClient.Client.V2.Gitlab.Submissions;
 using YandexContestClient.Client.V2.Gitlab.UploadArtifact;
 namespace YandexContestClient.Client.V2.Gitlab
 {
@@ -16,10 +19,25 @@ namespace YandexContestClient.Client.V2.Gitlab
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GitlabRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The remoteFile property</summary>
+        public global::YandexContestClient.Client.V2.Gitlab.RemoteFile.RemoteFileRequestBuilder RemoteFile
+        {
+            get => new global::YandexContestClient.Client.V2.Gitlab.RemoteFile.RemoteFileRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The report property</summary>
         public global::YandexContestClient.Client.V2.Gitlab.Report.ReportRequestBuilder Report
         {
             get => new global::YandexContestClient.Client.V2.Gitlab.Report.ReportRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The source property</summary>
+        public global::YandexContestClient.Client.V2.Gitlab.Source.SourceRequestBuilder Source
+        {
+            get => new global::YandexContestClient.Client.V2.Gitlab.Source.SourceRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The submissions property</summary>
+        public global::YandexContestClient.Client.V2.Gitlab.Submissions.SubmissionsRequestBuilder Submissions
+        {
+            get => new global::YandexContestClient.Client.V2.Gitlab.Submissions.SubmissionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The uploadArtifact property</summary>
         public global::YandexContestClient.Client.V2.Gitlab.UploadArtifact.UploadArtifactRequestBuilder UploadArtifact

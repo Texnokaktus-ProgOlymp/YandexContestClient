@@ -22,7 +22,7 @@ namespace YandexContestClient.Client.V2.Contests.Item.Submissions.Multiple
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MultipleRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v2/contests/{contestId}/submissions/multiple?runIds={runIds}{&locale*}", pathParameters)
+        public MultipleRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v2/contests/{contestId}/submissions/multiple{?locale*,runIds*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace YandexContestClient.Client.V2.Contests.Item.Submissions.Multiple
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MultipleRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v2/contests/{contestId}/submissions/multiple?runIds={runIds}{&locale*}", rawUrl)
+        public MultipleRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v2/contests/{contestId}/submissions/multiple{?locale*,runIds*}", rawUrl)
         {
         }
         /// <summary>

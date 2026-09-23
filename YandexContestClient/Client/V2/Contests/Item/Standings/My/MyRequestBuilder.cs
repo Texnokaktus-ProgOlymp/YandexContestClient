@@ -85,21 +85,31 @@ namespace YandexContestClient.Client.V2.Contests.Item.Standings.My
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MyRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("forJudge")]
             public bool? ForJudge { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("locale")]
             public string? Locale { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("locale")]
             public string Locale { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("showExternal")]
             public bool? ShowExternal { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("showVirtual")]
             public bool? ShowVirtual { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }
