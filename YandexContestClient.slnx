@@ -1,3 +1,7 @@
 ﻿<Solution>
-  <Project Path="YandexContestClient\YandexContestClient.csproj" Type="Classic C#" />
+  <Folder Name="/Solution Items/">
+    <File Path=".github/workflows/dotnet.yml" />
+    <File Path="update-client.sh" />
+  </Folder>
+  <Project Path="YandexContestClient/YandexContestClient.csproj" />
 </Solution>

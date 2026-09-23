@@ -30,7 +30,9 @@ jobs:
 
       - name: Version
         id: get-version
-        run: echo "version=1.${{ github.run_number }}.${{ github.run_attempt }}" >> $GITHUB_OUTPUT
+        run: echo "version=$(git show --no-patch --format=%ad --date=format:'%Y.%-m.%-d' HEAD).${{ github.run_number }}" >> $GITHUB_OUTPUT
+        env:
+          TZ: Europe/Moscow
 
       - name: Pack
         run: dotnet pack --configuration Release /p:Version=${{ steps.get-version.outputs.version }}
