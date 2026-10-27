@@ -1,7 +1,12 @@
-﻿<Solution>
+<Solution>
   <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="NuGet.config" />
     <File Path=".github/workflows/dotnet.yml" />
     <File Path="update-client.sh" />
   </Folder>
-  <Project Path="YandexContestClient/YandexContestClient.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/YandexContestClient/YandexContestClient.csproj" />
+  </Folder>
 </Solution>
